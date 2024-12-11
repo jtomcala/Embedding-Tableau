@@ -78,27 +78,9 @@
     <fieldset id="first_row_of_buttons">
       <legend>Filter the view</legend>
       <div id="button-container">
-        <input
-          type="button"
-          value="Oregon and Washington Only"
-          id="oregon_and_washington"
-          class="draggable"
-          draggable="true"
-        />
-        <input
-          type="button"
-          value="Clear Filter"
-          id="clear_filter"
-          class="draggable"
-          draggable="true"
-        />
-        <input
-          type="button"
-          value="Undo"
-          id="undo"
-          class="draggable"
-          draggable="true"
-        />
+        <input type="button" value="Oregon and Washington Only" id="oregon_and_washington" class="draggable" draggable="true" />
+        <input type="button" value="Clear Filter" id="clear_filter" class="draggable" draggable="true" />
+        <input type="button" value="Undo" id="undo" class="draggable" draggable="true" />
       </div>
     </fieldset>
 
@@ -143,11 +125,7 @@
 
       buttonContainer.addEventListener("drop", (e) => {
         e.preventDefault();
-        if (
-          draggedElement &&
-          e.target.classList.contains("draggable") &&
-          e.target !== draggedElement
-        ) {
+        if (draggedElement && e.target.classList.contains("draggable") && e.target !== draggedElement) {
           const children = Array.from(buttonContainer.children);
           const draggedIndex = children.indexOf(draggedElement);
           const targetIndex = children.indexOf(e.target);
